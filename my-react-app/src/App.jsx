@@ -15,12 +15,14 @@ import LoginButton from "./components/spreadOperatot/LoginButton";
 import Button from "./components/spreadOperatot/Button";
 import Posts from "./components/renderProps/Posts";
 import Todos from "./components/renderProps/Todos";
-
+import PanelMouseLogger from "./components/scroller/PanelMouseLogger";
+import PointMouseLogger from "./components/scroller/PointMouseLogger";
 function App() {
 
   return (
     <>
-      <Todos />
+      <PanelMouseLogger />
+      <PointMouseLogger />
     </>
   )
 }
