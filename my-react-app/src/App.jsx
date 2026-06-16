@@ -13,15 +13,14 @@ import { RadioGroup, RadioOption } from "./components/radio/index";
 import { useState } from "react";
 import LoginButton from "./components/spreadOperatot/LoginButton";
 import Button from "./components/spreadOperatot/Button";
+import Posts from "./components/renderProps/Posts";
+import Todos from "./components/renderProps/Todos";
 
 function App() {
-  const [selected, setSelected] = useState("");
 
   return (
     <>
-      <LoginButton variant="secondary">Login</LoginButton>
-      <Button variant="primary" onClick={() => alert('Sign up')}>Sign up</Button>
-      <div>{false}</div> 
+      <Todos />
     </>
   )
 }
