@@ -1,8 +1,8 @@
 import Button from "./Button";
 
-const LoginButton = ({ type, children, ...buttonProps }) => {
+const LoginButton = ({ variant, children, ...buttonProps }) => {
     return (
-        <Button type="primary" {...buttonProps} onClick={() => alert('Login')}>
+        <Button variant="secondary" {...buttonProps} onClick={() => alert('Login')}>
             {children}
         </Button>
     )

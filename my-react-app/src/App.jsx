@@ -19,8 +19,9 @@ function App() {
 
   return (
     <>
-      <LoginButton backgroundColor="secondary">Login</LoginButton>
-      <Button backgroundColor="primary" onClick={() => alert('Sign up')}>Sign up</Button>
+      <LoginButton variant="secondary">Login</LoginButton>
+      <Button variant="primary" onClick={() => alert('Sign up')}>Sign up</Button>
+      <div>{false}</div> 
     </>
   )
 }
