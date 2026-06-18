@@ -6,24 +6,22 @@ const Form = () => {
     // state for the comment
     const [ comment, setComment ] = useState("");
 
+    const isErr = Number(score) <=5 && comment.length <= 10;
+
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        if (Number(score) <=5 && comment.length <= 10) {
-            alert("Provide a comment");
-            return;
-        }
 
         // reset input values
         setScore("10");
         setComment("");
+        onSubmit({score, comment});
         return <h1>Submitted!</h1>
     }
 
     return (
         <>
             <form onSubmit={ handleSubmit }>
-                <p>{ score }</p>
+                <label htmlFor="range">Score: { score }</label>
                 <input 
                     type="range" 
                     name="range" 
@@ -41,7 +39,7 @@ const Form = () => {
                     onChange={ e => { setComment(e.target.value) }}
                 ></textarea>
 
-                <button type="submit">Submit</button>
+                <button disabled={isErr} type="submit">Submit</button>
             </form>
         </>
     )

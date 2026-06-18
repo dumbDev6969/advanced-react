@@ -17,12 +17,14 @@ import Posts from "./components/renderProps/Posts";
 import Todos from "./components/renderProps/Todos";
 import PanelMouseLogger from "./components/scroller/PanelMouseLogger";
 import PointMouseLogger from "./components/scroller/PointMouseLogger";
+
+
 function App() {
 
   return (
     <>
-      <PanelMouseLogger />
-      <PointMouseLogger />
+      <Form />
+
     </>
   )
 }
